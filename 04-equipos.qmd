@@ -107,6 +107,35 @@ viewof contrib = area("Contribuciones", {rows: 4, submit: "Generar declaración"
 ```
 :::
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Resolver un conflicto de autoría antes de que estalle
+Tres doctorandos y una posdoc preparan un artículo. Al empezar, la posdoc propone usar CRediT para acordar autoría:
+
+1. Lista de tareas previstas asignadas a roles CRediT.
+2. Acuerdo provisional del orden de firma según la contribución esperada.
+3. Revisión del acuerdo al terminar el análisis (las contribuciones cambian).
+4. Declaración final de contribuciones en el artículo.
+
+Cuando uno de los doctorandos asume más análisis de lo previsto, el acuerdo se revisa sin conflicto porque existía un criterio compartido. Lo que se evita: discutir la autoría al final, cuando ya hay tensión.
+:::
+
+## Ejercicios graduados
+
+**Básico.** ¿Cuándo conviene acordar los criterios de autoría?
+
+::: {.webex-solution boton="Ver solución"}
+Al inicio del proyecto, con revisión en momentos clave, y siempre por escrito.
+:::
+
+**Avanzado.** Redacta un acuerdo de autoría para un artículo en curso con la taxonomía CRediT.
+
+::: {.webex-solution boton="Ver solución"}
+Debe asignar roles por persona, criterios para el orden de firma, cuándo se revisará y qué se hará en caso de desacuerdo.
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-e4-lee titulo="¿Qué concepción de la supervisión (Lee, 2008)?" categorias="Funcional|Enculturación|Pensamiento crítico|Emancipación|Desarrollo de la relación"}

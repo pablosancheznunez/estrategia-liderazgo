@@ -104,6 +104,36 @@ En la vida investigadora se negocia constantemente: el orden de autoría, las co
 
 Antes de negociar, conoce tu **MAAN**: la *mejor alternativa a un acuerdo negociado* (en inglés, BATNA). Si el acuerdo que te ofrecen es peor que tu MAAN, no te conviene. Mejorar tu MAAN (por ejemplo, tener otra oferta) es la forma más eficaz de ganar poder de negociación.
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Negociar las condiciones de un contrato posdoctoral
+Te ofrecen un posdoc de dos años. Preparación:
+
+- **Tus intereses:** estabilidad, tiempo para publicar tu línea, posibilidad de dirigir un TFM.
+- **Intereses del grupo:** que avance el proyecto financiado, incorporar tus métodos.
+- **MAAN:** otra oferta de un año en tu ciudad, con menos salario.
+- **Criterios objetivos:** tablas salariales de la convocatoria, normas de la universidad sobre docencia.
+- **Opciones de beneficio mutuo:** 20 % del tiempo para tu línea a cambio de formar al equipo en tus métodos; dirección conjunta de un TFM.
+
+Resultado: no se negocia solo el salario (fijado por convocatoria), sino condiciones que importan a ambas partes.
+:::
+
+## Ejercicios graduados
+
+**Básico.** ¿Qué es tu MAAN en el caso?
+
+::: {.webex-solution boton="Ver solución"}
+La otra oferta de un año en tu ciudad: lo que harías si no hubiera acuerdo.
+:::
+
+**Avanzado.** Prepara una negociación real (contrato, autoría, reparto de tareas) con la plantilla del apéndice.
+
+::: {.webex-solution boton="Ver solución"}
+Incluye intereses de ambas partes, tres opciones de beneficio mutuo, criterios objetivos y tu MAAN, y valora cómo mejorarla.
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-e6-sesgo titulo="¿Qué heurística o sesgo aparece?" categorias="Representatividad|Disponibilidad|Anclaje|Falacia de la planificación"}

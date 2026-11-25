@@ -97,6 +97,36 @@ viewof l6 = rango("Abordo los problemas y conflictos a tiempo", [1, 5], {value: 
 ```
 :::
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Coordinar un seminario de doctorandos sin cargo formal
+Una doctoranda organiza el seminario mensual de su programa. No tiene autoridad formal, pero ejerce liderazgo:
+
+- **Visión:** «un espacio para presentar trabajo en curso sin miedo a equivocarse».
+- **Expectativas claras:** calendario semestral, 20 minutos por presentación, comentarios en formato «qué funciona, qué mejoraría».
+- **Atención individual:** pregunta a cada persona qué tipo de comentarios necesita.
+- **Reconocimiento:** agradece en público las presentaciones y los buenos comentarios.
+- **Afrontar problemas:** cuando un asistente monopoliza los turnos, habla con él en privado y propone un orden de palabra.
+
+Resultado: más asistencia y presentaciones más tempranas (menos «trabajo acabado»).
+:::
+
+## Ejercicios graduados
+
+**Básico.** ¿Qué conducta de liderazgo transaccional aparece en el caso?
+
+::: {.webex-solution boton="Ver solución"}
+Las expectativas claras (calendario, tiempos, formato de comentarios) y el reconocimiento.
+:::
+
+**Avanzado.** Identifica una situación en tu entorno en la que podrías ejercer liderazgo sin cargo y diseña tres conductas concretas.
+
+::: {.webex-solution boton="Ver solución"}
+Las conductas deben ser observables y relacionarse con los estilos del capítulo (visión, estímulo intelectual, atención individual, expectativas, reconocimiento).
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-e3-estilo titulo="¿Qué estilo de liderazgo describe?" categorias="Transformacional|Transaccional|De servicio|Laissez-faire"}

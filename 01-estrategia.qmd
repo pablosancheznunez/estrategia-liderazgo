@@ -98,6 +98,38 @@ viewof ideas = area("Ideas de proyecto", {rows: 5, submit: "Situar", value: "Rev
 ```
 :::
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Priorizar una cartera de cinco proyectos
+Una posdoc tiene cinco ideas y tiempo para dos o tres este año. Aplicando la matriz de Alon y la cartera equilibrada:
+
+| Idea | Dificultad | Ganancia | Decisión |
+|---|---|---|---|
+| Reanálisis de datos del grupo con un método nuevo | 2 | 4 | **Hacer ya**: viable y valioso |
+| Revisión sistemática del tema | 2 | 3 | **Hacer**: base para la línea |
+| Encuesta internacional propia | 4 | 4 | **Apuesta**: preparar la solicitud de financiación |
+| Nuevo instrumento de medida | 5 | 5 | **Aplazar** dos años, cuando haya equipo |
+| Capítulo descriptivo de la base de datos | 1 | 1 | **No hacer** o delegarlo como práctica |
+
+El criterio explícito ayuda a decir que no sin culpa: cada sí tiene un coste de oportunidad.
+:::
+
+## Ejercicios graduados
+
+**Básico.** ¿Qué hacer con una idea de dificultad 5 y ganancia 2?
+
+::: {.webex-solution boton="Ver solución"}
+Evitarla o reformularla: exige mucho esfuerzo para poco avance del conocimiento.
+:::
+
+**Avanzado.** Prioriza tus propias ideas con la tabla del caso y escribe qué dejarás de hacer este año.
+
+::: {.webex-solution boton="Ver solución"}
+La justificación debe usar los criterios (interés, viabilidad, ventaja propia) y tener en cuenta el equilibrio entre proyectos seguros y apuestas.
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-e1-alon titulo="¿En qué cuadrante de Alon está?" categorias="Lo mejor|Para aprender|Apuesta a largo plazo|Evitar"}

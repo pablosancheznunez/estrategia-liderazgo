@@ -91,6 +91,33 @@ Bourne y Chalupa (2006) resumen en diez reglas lo que separa las solicitudes fin
 - **Pide opinión** antes de enviar a colegas que hayan evaluado o conseguido financiación.
 - Si te rechazan, **lee los informes**, corrige y vuelve a presentarte: la persistencia es parte del proceso.
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Un cronograma realista con margen
+Proyecto de 24 meses, tres paquetes de trabajo. Primera versión: todo encadenado sin huecos, terminando justo en el mes 24. Revisión:
+
+1. **Dependencias:** el análisis no puede empezar sin datos depurados; el comité de ética debe aprobar antes de recoger datos.
+2. **Ruta crítica:** ética → recogida → depuración → análisis → artículo principal. Cualquier retraso aquí retrasa el final.
+3. **Margen:** 10-15 % del tiempo de la ruta crítica (unos tres meses) al final.
+4. **Hitos de control** en los meses 6, 12 y 18, con decisiones previstas si hay retrasos (reducir el alcance, priorizar resultados).
+:::
+
+## Ejercicios graduados
+
+**Básico.** ¿Qué es la ruta crítica de un proyecto?
+
+::: {.webex-solution boton="Ver solución"}
+La secuencia de tareas dependientes cuya duración determina la fecha final: cualquier retraso en ellas retrasa todo el proyecto.
+:::
+
+**Avanzado.** Dibuja el diagrama de Gantt de tu proyecto actual, marca la ruta crítica y añade un margen justificado.
+
+::: {.webex-solution boton="Ver solución"}
+Incluye dependencias, hitos con criterios verificables y una lista de tareas que podrían recortarse si hay retrasos.
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-e5-smart titulo="¿Es un objetivo SMART?" categorias="SMART|No SMART"}

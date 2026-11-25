@@ -100,6 +100,34 @@ viewof prioridad = seleccion("Prioridad principal este año", ["Investigar", "Es
 ```
 :::
 
+## Caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Un plan individual de desarrollo en una página
+Doctorando de tercer año interesado en la academia y en la gestión de la ciencia:
+
+- **Objetivos a un año:** depositar la tesis; publicar dos artículos como primer autor; hacer una estancia de tres meses.
+- **Objetivos a tres años:** contrato posdoctoral o puesto en una oficina de proyectos; experiencia en la redacción de una solicitud competitiva.
+- **Competencias por desarrollar:** redacción de proyectos (curso + colaborar en una solicitud del grupo), gestión de equipos (coordinar a dos estudiantes de TFM).
+- **Contactos:** dos personas que trabajan en oficinas de proyectos; un mentor fuera del grupo.
+- **Revisión:** en junio, con la directora y con el mentor.
+:::
+
+## Ejercicios graduados
+
+**Básico.** ¿Es SMART el objetivo «mejorar mi CV»? Reescríbelo.
+
+::: {.webex-solution boton="Ver solución"}
+No. Por ejemplo: «Publicar antes de diciembre un artículo como primer autor en una revista de mi área con revisión por pares».
+:::
+
+**Avanzado.** Redacta tu plan individual de desarrollo en una página y compártelo con una persona de confianza para recibir comentarios.
+
+::: {.webex-solution boton="Ver solución"}
+Debe tener objetivos SMART, acciones con fecha y una fecha de revisión; los comentarios externos suelen revelar caminos o contactos que no se habían considerado.
+:::
+
+
 ## Actividades
 
 ::: {.clasificar #ia-e2-eisen titulo="Clasifica en la matriz de Eisenhower" categorias="Importante y urgente|Importante, no urgente|Urgente, no importante|Ni lo uno ni lo otro"}
