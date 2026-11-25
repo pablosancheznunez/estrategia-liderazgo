@@ -9,7 +9,7 @@ Libro abierto e interactivo para doctorandos y personal investigador: pensar est
 
 ## Cita
 
-Sánchez-Núñez, P. (2026). *Estrategia y liderazgo en la investigación*. Universidad Carlos III de Madrid. Zenodo.
+Sánchez-Núñez, P. (2026). *Estrategia y liderazgo en la investigación*. Universidad Carlos III de Madrid. Zenodo. <https://doi.org/10.5281/zenodo.24534430>
 
 ## Licencia
 
