@@ -1,0 +1,57 @@
+---
+engine: markdown
+---
+
+# Herramientas {#sec-herramientas}
+
+Plantillas para copiar y usar. Todas caben en una página.
+
+## Plan individual de desarrollo
+
+| Apartado | Contenido |
+|---|---|
+| Situación actual | Etapa, logros del último año, competencias fuertes y por mejorar |
+| Caminos que me interesan | Dos o tres, con lo que sé de cada uno |
+| Objetivos a un año | Tres, SMART |
+| Objetivos a tres años | Dos o tres |
+| Acciones | Formación, proyectos, estancias, contactos, con fecha |
+| Apoyos | Mentores, redes, recursos |
+| Revisión | Fecha de la próxima revisión y con quién |
+
+## Acuerdo de supervisión o colaboración
+
+- Frecuencia y formato de las reuniones; quién prepara el orden del día y el acta.
+- Plazo razonable para comentar borradores.
+- Criterios de autoría y de orden de firma (con CRediT).
+- Gestión y propiedad de los datos y del código.
+- Congresos, estancias y formación previstos.
+- Horarios, vacaciones y disponibilidad.
+- Cómo se plantea y resuelve un desacuerdo.
+
+## Análisis DAFO
+
+| | Positivo | Negativo |
+|---|---|---|
+| **Interno** | Fortalezas | Debilidades |
+| **Externo** | Oportunidades | Amenazas |
+
+## Registro de riesgos
+
+| Riesgo | Probabilidad (1-5) | Impacto (1-5) | Puntuación | Mitigación | Contingencia | Responsable |
+|---|---|---|---|---|---|---|
+
+## Preparar una negociación
+
+1. Mis intereses (¿por qué quiero lo que pido?).
+2. Los intereses probables de la otra parte.
+3. Tres opciones de beneficio mutuo.
+4. Criterios objetivos que puedo invocar.
+5. Mi MAAN y cómo mejorarla.
+6. La MAAN probable de la otra parte.
+
+## Premortem en 20 minutos
+
+1. «Es dentro de un año y el proyecto ha fracasado».
+2. Cinco minutos: cada persona escribe, en silencio, las causas.
+3. Ronda: una causa por persona, hasta agotarlas.
+4. Elegid las tres más probables o graves y asignad acciones.

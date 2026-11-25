@@ -1,0 +1,175 @@
+---
+engine: markdown
+---
+
+# Capítulo 2. Diseñar la carrera {#sec-cap2}
+
+::: {.callout-note appearance="default"}
+## Objetivos
+- Conocer los caminos profesionales tras el doctorado, dentro y fuera de la academia.
+- Elaborar un plan individual de desarrollo con objetivos y competencias.
+- Gestionar el tiempo según tus prioridades, no según la urgencia.
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+## Glosario del capítulo
+[Plan individual de desarrollo](92-glosario.qmd#gl-pid) · [Competencias transferibles](92-glosario.qmd#gl-transferibles) · [Mentoría](92-glosario.qmd#gl-mentoria) · [Red profesional](92-glosario.qmd#gl-red) · [Matriz de Eisenhower](92-glosario.qmd#gl-eisenhower)
+:::
+
+::: {.callout-tip appearance="simple" icon="false"}
+## Descargas
+[Plantilla de entrega del reto (.qmd)](plantillas/entrega_reto.qmd){.btn .btn-outline-primary .btn-sm download="entrega_reto.qmd"}
+[Tema de estilo (.scss)](plantillas/informe.scss){.btn .btn-outline-primary .btn-sm download="informe.scss"}
+:::
+
+## Lectura obligatoria
+
+::: {.lectura}
+Sauermann, H.; Roach, M. (2012). [Science PhD career preferences: Levels, changes, and advisor encouragement](https://doi.org/10.1371/journal.pone.0036307). *PLoS ONE*, 7(5), e36307.
+:::
+
+## 1. Muchos caminos, una minoría académica
+
+Sauermann y Roach (2012) encuestaron a miles de doctorandos de ciencias en universidades de Estados Unidos. La carrera académica era la preferida por muchos al empezar, pero ese interés **disminuía a lo largo del doctorado**, mientras crecía el interés por la industria y otros caminos. Además, los doctorandos percibían que sus directores animaban **más** la carrera académica que las demás. Es una conclusión importante: las plazas académicas estables son muchas menos que los doctores que se forman, y la mayoría trabajará fuera de la universidad.
+
+| Camino | Qué valora | Cómo prepararlo |
+|---|---|---|
+| **Academia** | Publicaciones, financiación obtenida, docencia, movilidad | Línea propia, estancias, acreditaciones y convocatorias posdoctorales |
+| **Centros públicos de investigación** | Proyectos, transferencia, trabajo en equipo | Colaboraciones, especialización técnica |
+| **Industria e I+D privada** | Resolución de problemas, trabajo por objetivos, comunicación | Prácticas, proyectos aplicados, red profesional |
+| **Gestión y política científica** | Conocimiento del sistema, redacción, análisis | Experiencia en convocatorias, evaluación y comités |
+| **Datos, consultoría, divulgación, edición** | Competencias técnicas y comunicativas | Portafolio público, cursos, voluntariado |
+
+En España, la carrera académica pasa por las **acreditaciones de ANECA** y por programas de contratación posdoctoral (como Juan de la Cierva o Ramón y Cajal); en Europa, las becas Marie Skłodowska-Curie y las ayudas del Consejo Europeo de Investigación (ERC). Las convocatorias cambian: consulta siempre las bases vigentes.
+
+## 2. Un plan individual de desarrollo
+
+Un **plan individual de desarrollo** (PID) es un documento breve que revisas cada año con tu mentor o mentora:
+
+1. **Autoevaluación**: intereses, valores, competencias (científicas y **transferibles**: comunicación, gestión, liderazgo, docencia).
+2. **Exploración**: qué caminos te atraen; habla con personas que ya los recorren.
+3. **Objetivos** a uno y tres años, concretos y medibles.
+4. **Acciones**: formación, proyectos, estancias, contactos.
+5. **Revisión** periódica.
+
+Una **red profesional** amplia (colegas de otros grupos, de otras disciplinas y de fuera de la academia) y varios **mentores** para distintos aspectos aumentan las oportunidades. Ninguna persona puede orientarte en todo.
+
+## 3. El tiempo: lo importante frente a lo urgente
+
+La **matriz de Eisenhower** clasifica las tareas por importancia y urgencia. Lo que más pesa en una carrera (escribir artículos, aprender un método, preparar una solicitud) suele ser **importante pero no urgente**, y por eso se aplaza ante correos, reuniones y peticiones. Protege bloques de tiempo semanales para ello, como si fueran citas.
+
+## Laboratorio: ¿a qué dedicas tu semana? {#lab-e2-tiempo}
+
+::: {.laboratorio}
+::: {.laboratorio-etiqueta}
+Laboratorio · se ejecuta en tu navegador
+:::
+
+Indica las horas semanales que dedicas, de verdad, a cada actividad y cuál es tu prioridad principal este año.
+
+```{ojs}
+//| echo: false
+rango = window.Lab.rango
+seleccion = window.Lab.seleccion
+viewof h_inv = rango("Investigar (datos, experimentos, análisis)", [0, 40], {value: 12})
+viewof h_esc = rango("Escribir (artículos, tesis, solicitudes)", [0, 40], {value: 4})
+viewof h_doc = rango("Docencia y tutorías", [0, 40], {value: 8})
+viewof h_ges = rango("Gestión, correo y reuniones", [0, 40], {value: 12})
+viewof h_for = rango("Formación y lectura", [0, 40], {value: 3})
+viewof h_red = rango("Red profesional y divulgación", [0, 40], {value: 1})
+viewof prioridad = seleccion("Prioridad principal este año", ["Investigar", "Escribir", "Docencia", "Formación", "Red profesional"], {value: "Escribir"})
+```
+
+```{ojs}
+//| echo: false
+{
+  const act = [["Investigar", h_inv, "#2a78d6"], ["Escribir", h_esc, "#eb6834"], ["Docencia", h_doc, "#1baf7a"], ["Gestión", h_ges, "#a3a29e"], ["Formación", h_for, "#eda100"], ["Red profesional", h_red, "#e87ba4"]];
+  const tot = act.reduce((s, a) => s + a[1], 0) || 1;
+  let x = 0; const barras = act.map(([n, h, c]) => { const w = 520 * h / tot, r = `<rect x="${x}" y="0" width="${Math.max(0, w - 2)}" height="34" fill="${c}"><title>${n}: ${h} h</title></rect>`; x += w; return r; }).join("");
+  const hp = act.find(a => a[0] === prioridad)[1], pp = 100 * hp / tot, pg = 100 * h_ges / tot;
+  const pc = v => v.toFixed(0) + " %";
+  const msg = pp < 20 ? `Tu prioridad (${prioridad.toLowerCase()}) solo recibe el ${pc(pp)} de tu tiempo. Reserva bloques fijos para ella.` : `Tu prioridad recibe el ${pc(pp)} del tiempo: coherente con lo que dices que importa.`;
+  const d = html`<div role="status"></div>`;
+  d.innerHTML = `<p><strong>${tot} horas</strong> a la semana${tot > 50 ? ' <span class="lab-mal" style="font-weight:600">· una carga difícil de sostener</span>' : ""}.</p>
+   <svg viewBox="0 0 520 34" width="100%" style="max-width:520px" role="img" aria-label="Reparto del tiempo semanal">${barras}</svg>
+   <ul class="small">${act.map(([n, h]) => `<li>${n}: ${h} h (${pc(100 * h / tot)})</li>`).join("")}</ul>
+   <p style="font-weight:600" class="${pp < 20 ? "lab-medio" : "lab-bien"}">${msg}</p>
+   ${pg > 30 ? `<p class="small">La gestión, el correo y las reuniones ocupan el ${pc(pg)}: agrúpalos en franjas y revisa qué reuniones son imprescindibles.</p>` : ""}`;
+  return d;
+}
+```
+:::
+
+## Actividades
+
+::: {.clasificar #ia-e2-eisen titulo="Clasifica en la matriz de Eisenhower" categorias="Importante y urgente|Importante, no urgente|Urgente, no importante|Ni lo uno ni lo otro"}
+- Enviar la solicitud de una convocatoria que cierra hoy → Importante y urgente
+- Escribir el artículo principal de la tesis → Importante, no urgente
+- Responder a un correo masivo que pide confirmación inmediata → Urgente, no importante
+- Revisar las redes sociales entre tareas → Ni lo uno ni lo otro
+- Aprender el método que necesitarás el año que viene → Importante, no urgente
+:::
+
+::: {.escenario #ia-e2-oferta titulo="Una oferta inesperada"}
+Estás en el tercer año de doctorado. Una empresa te ofrece un puesto de analista de datos al terminar, y tu director da por hecho que harás un posdoctorado.
+
+### La oferta {#e2e-inicio}
+¿Qué haces primero?
+
+- [Rechazarla: lo normal es seguir en la academia](#e2e-rechazo)
+- [Explorar ambas opciones: hablar con gente de los dos mundos y revisar tus prioridades](#e2e-explorar)
+
+### Decisión por defecto {#e2e-rechazo .final .mal}
+Decides sin información, por inercia. Sauermann y Roach (2012) muestran que muchos doctorandos cambian de preferencias y que el entorno empuja hacia la academia; conviene decidir con datos propios.
+
+### Explorar {#e2e-explorar}
+Has hablado con varias personas. ¿Cómo tratas el tema con tu director?
+
+- [No le dices nada para no molestarle](#e2e-callar)
+- [Le explicas tus dudas y le pides opinión, dejando claro que la decisión es tuya](#e2e-hablar)
+
+### Silencio {#e2e-callar .final .regular}
+Evitas el conflicto, pero pierdes un consejo valioso y quizá contactos útiles. La transparencia suele reforzar la relación.
+
+### Conversación adulta {#e2e-hablar .final .bien}
+Una buena supervisión apoya los objetivos de la persona supervisada, no solo los del grupo. Decides con información y sin romper la relación.
+:::
+
+## Reto evaluable {#reto-e2}
+
+::: {.callout-important appearance="simple" icon="false"}
+## Reto del capítulo 2 · Tu plan individual de desarrollo
+1. Completa un **PID**: autoevaluación de competencias, dos caminos profesionales que te interesan, objetivos a uno y tres años y acciones concretas.
+2. Habla con **dos personas** que trabajen en esos caminos y resume qué aprendiste. (Si prefieres no hacerlo, sustitúyelo por el análisis de cinco ofertas de empleo reales.)
+3. Registra tu tiempo durante una semana, analízalo con el laboratorio y propón cambios.
+
+**Entrega:** con la [plantilla de entrega](plantillas/entrega_reto.qmd). Este reto **no tiene solución en el libro**.
+:::
+
+## Autoevaluación
+
+Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
+
+::: {.webex-check .webex-box}
+1. Según Sauermann y Roach (2012), el interés por la carrera académica tiende a {{< mcq "aumentar durante el doctorado" "*disminuir durante el doctorado" "mantenerse igual" >}}
+2. La mayoría de las personas doctoradas trabajará en la universidad. {{< torf false >}}
+3. La comunicación, la gestión o la docencia son competencias {{< fitb "transferibles" ignorecase=true >}}
+4. Un plan individual de desarrollo se revisa de forma periódica. {{< torf true >}}
+5. Escribir el artículo principal de la tesis suele ser {{< mcq "urgente y no importante" "*importante y no urgente" "ni importante ni urgente" >}}
+6. Conviene tener un único mentor para todos los aspectos de la carrera. {{< torf false >}}
+7. La herramienta que clasifica tareas por importancia y urgencia es la matriz de {{< fitb "Eisenhower" ignorecase=true >}}
+8. ¿Qué percibían los doctorandos sobre el consejo de sus directores?
+
+{{< longmcq "Que no hablaban de carrera" "*Que animaban más la carrera académica que las demás" "Que animaban sobre todo a ir a la industria" >}}
+:::
+
+::: {.webex-solution boton="Ver explicaciones"}
+- Las preferencias cambian.
+- Las plazas estables son muchas menos que los doctores.
+- *Transferable skills*.
+- Al menos una vez al año.
+- Por eso se aplaza.
+- Varios mentores para distintos aspectos.
+- *Eisenhower matrix*.
+- Un sesgo del entorno que conviene conocer.
+:::

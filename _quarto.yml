@@ -1,0 +1,79 @@
+project:
+  type: book
+  output-dir: _book
+  resources:
+  - laboratorio.js
+  - fuentes
+  - datos
+  - plantillas
+  - pdf
+  - moodle
+  - sw.js
+book:
+  title: Estrategia y liderazgo en la investigación
+  subtitle: Planificar una carrera, dirigir equipos y gestionar proyectos científicos
+  author:
+  - name: Pablo Sánchez-Núñez
+    orcid: 0000-0001-7845-9506
+    url: https://pablosancheznunez.com
+    affiliation: Universidad Carlos III de Madrid
+  date: last-modified
+  date-format: D [de] MMMM [de] YYYY
+  language: es
+  site-url: https://pablosancheznunez.com/estrategia-liderazgo/
+  search: true
+  page-navigation: true
+  sidebar:
+    tools:
+    - icon: download
+      menu:
+      - text: Libro en PDF
+        href: pdf/estrategia-liderazgo.pdf
+      - text: Libro en EPUB (lectores de libros electrónicos)
+        href: pdf/estrategia-liderazgo.epub
+  page-footer:
+    left: © 2026 [Pablo Sánchez-Núñez](https://pablosancheznunez.com) · [ORCID 0000-0001-7845-9506](https://orcid.org/0000-0001-7845-9506) · Texto bajo licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es)
+    right: Universidad Carlos III de Madrid · Hecho con [Quarto](https://quarto.org)
+  chapters:
+  - index.qmd
+  - part: Capítulos
+    chapters:
+    - 01-estrategia.qmd
+    - 02-carrera.qmd
+    - 03-liderar.qmd
+    - 04-equipos.qmd
+    - 05-proyectos.qmd
+    - 06-decidir.qmd
+  appendices:
+  - 90-herramientas.qmd
+  - 91-guia-docente.qmd
+  - 92-glosario.qmd
+lang: es
+crossref:
+  chapters: false
+filters:
+- webex
+- interactivos
+format:
+  html:
+    theme:
+      light:
+      - cosmo
+      - estilos.scss
+      dark:
+      - darkly
+      - estilos-oscuro.scss
+    respect-user-color-scheme: true
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    code-copy: true
+    css: fuentes/fuentes.css
+    lightbox: auto
+    link-external-newwindow: true
+    callout-appearance: simple
+    include-in-header:
+    - laboratorio.html
+    include-after-body:
+    - accesibilidad.html
+    - progreso.html

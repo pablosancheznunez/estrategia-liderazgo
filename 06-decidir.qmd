@@ -1,0 +1,185 @@
+---
+engine: markdown
+---
+
+# Capítulo 6. Decidir y negociar {#sec-cap6}
+
+::: {.callout-note appearance="default"}
+## Objetivos
+- Reconocer los sesgos que distorsionan las decisiones bajo incertidumbre.
+- Tomar decisiones complejas con criterios explícitos y técnicas como el *premortem*.
+- Negociar por intereses, no por posiciones, conociendo tu mejor alternativa.
+:::
+
+::: {.callout-note appearance="simple" icon="false"}
+## Glosario del capítulo
+[Heurística](92-glosario.qmd#gl-heuristica) · [Anclaje](92-glosario.qmd#gl-anclaje) · [Disponibilidad](92-glosario.qmd#gl-disponibilidad) · [Matriz de decisión](92-glosario.qmd#gl-matriz) · [Premortem](92-glosario.qmd#gl-premortem) · [Intereses y posiciones](92-glosario.qmd#gl-intereses) · [MAAN](92-glosario.qmd#gl-maan)
+:::
+
+::: {.callout-tip appearance="simple" icon="false"}
+## Descargas
+[Plantilla de entrega del reto (.qmd)](plantillas/entrega_reto.qmd){.btn .btn-outline-primary .btn-sm download="entrega_reto.qmd"}
+[Tema de estilo (.scss)](plantillas/informe.scss){.btn .btn-outline-primary .btn-sm download="informe.scss"}
+:::
+
+## Lectura obligatoria
+
+::: {.lectura}
+Tversky, A.; Kahneman, D. (1974). [Judgment under uncertainty: Heuristics and biases](https://doi.org/10.1126/science.185.4157.1124). *Science*, 185(4157), 1124-1131.
+:::
+
+## 1. Atajos que engañan
+
+Tversky y Kahneman (1974) mostraron que, al juzgar probabilidades, usamos **heurísticas** (atajos mentales) que suelen funcionar, pero producen errores sistemáticos:
+
+| Heurística | Qué hacemos | Ejemplo en investigación |
+|---|---|---|
+| **Representatividad** | Juzgar por el parecido con un estereotipo, ignorando las tasas base | Pensar que un candidato «con perfil de investigador brillante» lo será, sin mirar su trayectoria |
+| **Disponibilidad** | Juzgar la frecuencia por lo fácil que es recordar casos | Sobrestimar el éxito de una convocatoria porque conoces a dos personas que la consiguieron |
+| **Anclaje y ajuste** | Partir de un valor inicial y ajustar poco | Planificar el proyecto a partir del calendario de la convocatoria anterior |
+
+A estos se suma la **falacia de la planificación**: subestimar sistemáticamente el tiempo y el coste de nuestros propios proyectos.
+
+## 2. Decidir mejor
+
+- **Criterios explícitos antes de ver las opciones**: evita adaptar los criterios a la opción que ya prefieres.
+- **Matriz de decisión ponderada**: puntuar cada opción en cada criterio y ponderar por su importancia.
+- **Vista desde fuera**: ¿cuánto tardan, de media, proyectos parecidos? Empieza por esa tasa base.
+- ***Premortem*** (Gary Klein): imagina que dentro de un año el proyecto ha fracasado y pregunta al equipo por qué. Saca a la luz riesgos que nadie se atreve a mencionar.
+- **Decidir quién decide**: no todo exige consenso; aclara si una decisión es tuya, consultiva o del grupo.
+
+## Laboratorio: matriz de decisión ponderada {#lab-e6-matriz}
+
+::: {.laboratorio}
+::: {.laboratorio-etiqueta}
+Laboratorio · se ejecuta en tu navegador
+:::
+
+Ejemplo: elegir entre tres ofertas posdoctorales. Ajusta la importancia de cada criterio (0-5) y la puntuación de cada opción (1-5). Prueba a cambiar los pesos: ¿cambia la decisión?
+
+```{ojs}
+//| echo: false
+rango = window.Lab.rango
+viewof w1 = rango("Peso · encaje científico", [0, 5], {value: 5})
+viewof w2 = rango("Peso · estabilidad del contrato", [0, 5], {value: 3})
+viewof w3 = rango("Peso · calidad de la mentoría", [0, 5], {value: 4})
+viewof w4 = rango("Peso · vida personal y ubicación", [0, 5], {value: 3})
+```
+
+```{ojs}
+//| echo: false
+viewof notas = {
+  const crit = ["Encaje científico", "Estabilidad", "Mentoría", "Vida personal"], ops = ["Grupo A (extranjero)", "Grupo B (misma ciudad)", "Empresa C"];
+  const ini = [[5, 2, 4, 2], [3, 3, 3, 5], [2, 5, 2, 4]];
+  const t = html`<table class="table table-sm"><caption>Puntuaciones de 1 a 5</caption><thead><tr><th scope="col">Opción</th>${crit.map(c => `<th scope="col">${c}</th>`).join("")}</tr></thead><tbody>${ops.map((o, i) => `<tr><th scope="row">${o}</th>${crit.map((c, j) => `<td><input type="number" min="1" max="5" value="${ini[i][j]}" aria-label="${o}, ${c}" style="width:3.5em" class="form-control form-control-sm"></td>`).join("")}</tr>`).join("")}</tbody></table>`;
+  const leer = () => ops.map((o, i) => [o, [...t.querySelectorAll("tbody tr")[i].querySelectorAll("input")].map(x => Math.min(5, Math.max(1, +x.value || 1)))]);
+  t.value = leer(); t.addEventListener("input", () => { t.value = leer(); });
+  return t;
+}
+```
+
+```{ojs}
+//| echo: false
+{
+  const W = [w1, w2, w3, w4], sw = W.reduce((a, b) => a + b, 0) || 1;
+  const res = notas.map(([o, v]) => [o, v.reduce((s, x, j) => s + x * W[j], 0) / sw]).sort((a, b) => b[1] - a[1]);
+  const dif = res[0][1] - res[1][1];
+  const d = html`<div role="status"></div>`;
+  d.innerHTML = `<ol>${res.map(([o, s]) => `<li>${o}: <strong>${s.toFixed(2).replace(".", ",")}</strong> sobre 5</li>`).join("")}</ol>
+   <p style="font-weight:600" class="${dif < 0.3 ? "lab-medio" : "lab-bien"}">${dif < 0.3 ? "Diferencia muy pequeña: la decisión depende de matices que la matriz no recoge. Habla con personas de cada grupo." : `Gana ${res[0][0]} con un margen claro (${dif.toFixed(2).replace(".", ",")} puntos).`}</p>
+   <p class="small">La matriz no decide por ti: si el resultado te decepciona, quizá hay un criterio que no has escrito. Eso también es información.</p>`;
+  return d;
+}
+```
+:::
+
+## 3. Negociar
+
+En la vida investigadora se negocia constantemente: el orden de autoría, las condiciones de un contrato, el reparto de tareas en un consorcio, los plazos con una editorial. La **negociación basada en principios** (Fisher y Ury, *Getting to Yes*) propone:
+
+1. **Separar a las personas del problema**: duro con el problema, cordial con las personas.
+2. **Centrarse en intereses, no en posiciones**. La posición es lo que se pide («quiero ser primera autora»); el interés, por qué («necesito un artículo como primera autora para la convocatoria»). Bajo posiciones opuestas a menudo hay intereses compatibles.
+3. **Inventar opciones de beneficio mutuo** antes de decidir.
+4. **Usar criterios objetivos** (normas de la revista, CRediT, tablas salariales, convenios).
+
+Antes de negociar, conoce tu **MAAN**: la *mejor alternativa a un acuerdo negociado* (en inglés, BATNA). Si el acuerdo que te ofrecen es peor que tu MAAN, no te conviene. Mejorar tu MAAN (por ejemplo, tener otra oferta) es la forma más eficaz de ganar poder de negociación.
+
+## Actividades
+
+::: {.clasificar #ia-e6-sesgo titulo="¿Qué heurística o sesgo aparece?" categorias="Representatividad|Disponibilidad|Anclaje|Falacia de la planificación"}
+- «Todos los ganadores del premio que recuerdo eran de grupos grandes, así que casi siempre gana un grupo grande» → Disponibilidad
+- La revisión sistemática que planificaste en tres meses lleva diez → Falacia de la planificación
+- Pedir 30 000 € porque la convocatoria anterior financiaba esa cifra, aunque el proyecto cuesta el doble → Anclaje
+- Suponer que un candidato será un gran investigador porque «tiene pinta de científico» → Representatividad
+:::
+
+::: {.clasificar #ia-e6-interes titulo="¿Posición o interés?" categorias="Posición|Interés"}
+- «Quiero ser la primera autora» → Posición
+- «Necesito liderar un artículo para la acreditación» → Interés
+- «No acepto menos de 2500 € al mes» → Posición
+- «Necesito poder pagar el alquiler en una ciudad cara» → Interés
+:::
+
+::: {.escenario #ia-e6-autoria titulo="Negociar el orden de autoría"}
+Tú y otro doctorando habéis hecho una parte parecida del trabajo. Los dos queréis ser primer autor.
+
+### El conflicto {#e6e-inicio}
+¿Cómo empiezas la conversación?
+
+- [«Lo justo es que sea yo, que empecé antes»](#e6e-posicion)
+- [«¿Por qué es importante para ti? Te cuento también por qué lo es para mí»](#e6e-interes)
+
+### Posiciones enfrentadas {#e6e-posicion .final .mal}
+Cada uno defiende su posición; el conflicto escala y acaba decidiendo la dirección, con malestar en el grupo.
+
+### Intereses {#e6e-interes}
+Descubrís que él necesita el artículo para una convocatoria este año y tú para tu tesis el año que viene. ¿Qué propones?
+
+- [Que lo decida el director](#e6e-delegar)
+- [Primera autoría compartida declarada en la revista y, en el siguiente artículo, el orden inverso, con las contribuciones en CRediT](#e6e-acuerdo)
+
+### Delegar {#e6e-delegar .final .regular}
+Es una salida, pero renunciáis a un acuerdo que ya teníais a mano y que respondía a los intereses de ambos.
+
+### Beneficio mutuo {#e6e-acuerdo .final .bien}
+Opciones de beneficio mutuo con criterios objetivos (CRediT, normas de la revista): los dos obtenéis lo que necesitáis y la relación sale reforzada.
+:::
+
+## Reto evaluable {#reto-e6}
+
+::: {.callout-important appearance="simple" icon="false"}
+## Reto del capítulo 6 · Una decisión y una negociación
+1. Elige una decisión importante que tengas pendiente. Define los criterios **antes** de valorar las opciones, aplica la matriz ponderada y haz un **premortem** de la opción ganadora.
+2. Prepara una negociación real o verosímil: tus intereses, los de la otra parte, tres opciones de beneficio mutuo, criterios objetivos y tu MAAN.
+3. Reflexiona sobre qué sesgos podían estar influyendo en ti.
+
+**Entrega:** con la [plantilla de entrega](plantillas/entrega_reto.qmd). Este reto **no tiene solución en el libro**.
+:::
+
+## Autoevaluación
+
+Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
+
+::: {.webex-check .webex-box}
+1. Según Tversky y Kahneman (1974), las heurísticas nunca son útiles. {{< torf false >}}
+2. Juzgar la frecuencia por la facilidad con que se recuerdan casos es la heurística de {{< fitb "disponibilidad" ignorecase=true >}}
+3. Subestimar el tiempo de tus propios proyectos es la falacia de la {{< fitb "planificación" "planificacion" ignorecase=true >}}
+4. En un premortem se imagina que el proyecto {{< mcq "ha tenido éxito" "*ha fracasado" "no ha empezado" >}}
+5. Conviene definir los criterios de decisión después de ver las opciones. {{< torf false >}}
+6. La mejor alternativa a un acuerdo negociado se abrevia como {{< mcq "PAN" "*MAAN" "BAN" >}}
+7. «Necesito liderar un artículo para la acreditación» expresa {{< mcq "una posición" "*un interés" "una amenaza" >}}
+8. ¿Cuál es la forma más eficaz de ganar poder en una negociación?
+
+{{< longmcq "Hablar más alto" "*Mejorar tu mejor alternativa a un acuerdo negociado" "No revelar nunca nada" >}}
+:::
+
+::: {.webex-solution boton="Ver explicaciones"}
+- Funcionan a menudo, pero con errores sistemáticos.
+- *Availability*.
+- *Planning fallacy*.
+- Y se buscan las causas.
+- Para no adaptarlos a la opción preferida.
+- BATNA en inglés.
+- La posición sería «quiero ser primera autora».
+- Si tienes una buena alternativa, puedes decir que no.
+:::

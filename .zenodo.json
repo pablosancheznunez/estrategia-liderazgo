@@ -1,0 +1,33 @@
+{
+  "title": "Estrategia y liderazgo en la investigación",
+  "upload_type": "publication",
+  "publication_type": "book",
+  "description": "<p>Libro abierto e interactivo para doctorandos y personal investigador sobre estrategia y liderazgo en la ciencia: pensar estratégicamente una línea de investigación y una carrera, liderar y dirigir equipos, la supervisión doctoral, la colaboración y la autoría, la gestión de proyectos y la financiación, y la toma de decisiones y la negociación. Incluye laboratorios interactivos, escenarios de decisión, autoevaluación y retos.</p>",
+  "creators": [
+    {
+      "name": "Sánchez-Núñez, Pablo",
+      "affiliation": "Universidad Carlos III de Madrid",
+      "orcid": "0000-0001-7845-9506"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "language": "spa",
+  "access_right": "open",
+  "keywords": [
+    "liderazgo",
+    "estrategia",
+    "carrera investigadora",
+    "dirección de equipos",
+    "supervisión doctoral",
+    "gestión de proyectos",
+    "negociación",
+    "colaboración científica"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://pablosancheznunez.com/estrategia-liderazgo/",
+      "relation": "isAlternateIdentifier",
+      "scheme": "url"
+    }
+  ]
+}

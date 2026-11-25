@@ -1,0 +1,130 @@
+---
+engine: markdown
+---
+
+# Glosario {#sec-glosario}
+
+Términos del libro ordenados por capítulo.
+
+## Pensar estratégicamente
+
+### Estrategia {#gl-estrategia}
+Conjunto coherente de decisiones sobre a qué dedicar recursos escasos para alcanzar objetivos a medio plazo. → [Capítulo 1](01-estrategia.qmd)
+
+### Línea de investigación {#gl-linea}
+Secuencia de preguntas conectadas en la que cada resultado facilita el siguiente. → [Capítulo 1](01-estrategia.qmd)
+
+### Ventaja propia {#gl-ventaja}
+Combinación de conocimientos, datos, métodos, contactos y contexto que pocas personas tienen. → [Capítulo 1](01-estrategia.qmd)
+
+### Cartera de proyectos {#gl-cartera}
+Conjunto de proyectos con riesgos distintos que se combinan para no depender de una sola apuesta. → [Capítulo 1](01-estrategia.qmd)
+
+### DAFO {#gl-dafo}
+Análisis de debilidades, amenazas, fortalezas y oportunidades. → [Capítulo 1](01-estrategia.qmd)
+
+### Coste de oportunidad {#gl-oportunidad}
+Valor de lo que se deja de hacer al elegir una opción. → [Capítulo 1](01-estrategia.qmd)
+
+## Diseñar la carrera
+
+### Plan individual de desarrollo {#gl-pid}
+Documento con autoevaluación, objetivos y acciones de carrera que se revisa periódicamente. → [Capítulo 2](02-carrera.qmd)
+
+### Competencias transferibles {#gl-transferibles}
+Habilidades útiles en muchos trabajos: comunicación, gestión, liderazgo, docencia, análisis. → [Capítulo 2](02-carrera.qmd)
+
+### Mentoría {#gl-mentoria}
+Relación de orientación profesional con una persona con más experiencia. → [Capítulo 2](02-carrera.qmd)
+
+### Red profesional {#gl-red}
+Conjunto de contactos dentro y fuera de la academia que facilitan información y oportunidades. → [Capítulo 2](02-carrera.qmd)
+
+### Matriz de Eisenhower {#gl-eisenhower}
+Clasificación de las tareas según su importancia y su urgencia. → [Capítulo 2](02-carrera.qmd)
+
+## Liderar
+
+### Liderazgo {#gl-liderazgo}
+Proceso de influencia para que un grupo alcance objetivos compartidos. → [Capítulo 3](03-liderar.qmd)
+
+### Desarrollo del líder {#gl-dlider}
+Ampliación de las capacidades individuales para liderar (capital humano). → [Capítulo 3](03-liderar.qmd)
+
+### Desarrollo del liderazgo {#gl-dliderazgo}
+Ampliación de la capacidad colectiva de un grupo para trabajar juntos (capital social). → [Capítulo 3](03-liderar.qmd)
+
+### Liderazgo transformacional {#gl-transformacional}
+Estilo basado en la visión, el estímulo intelectual, la atención individual y el ejemplo. → [Capítulo 3](03-liderar.qmd)
+
+### Liderazgo transaccional {#gl-transaccional}
+Estilo basado en acuerdos claros, reconocimiento por resultados y corrección de desviaciones. → [Capítulo 3](03-liderar.qmd)
+
+### Retroalimentación 360° {#gl-360}
+Valoración de una persona por sus superiores, iguales y personas a su cargo. → [Capítulo 3](03-liderar.qmd)
+
+## Equipos, supervisión y autoría
+
+### Seguridad psicológica {#gl-seguridad}
+Creencia compartida de que en el equipo se pueden asumir riesgos interpersonales sin temor. → [Capítulo 4](04-equipos.qmd)
+
+### Aprendizaje en equipo {#gl-aprendizaje}
+Conductas como pedir ayuda, comentar errores y buscar retroalimentación. → [Capítulo 4](04-equipos.qmd)
+
+### Supervisión doctoral {#gl-supervision}
+Relación de dirección y acompañamiento de una tesis; admite varias concepciones. → [Capítulo 4](04-equipos.qmd)
+
+### Acuerdo de supervisión {#gl-acuerdo}
+Documento que fija expectativas, reuniones, plazos y criterios de autoría. → [Capítulo 4](04-equipos.qmd)
+
+### CRediT {#gl-credit}
+Taxonomía de 14 roles de contribución a la investigación (ANSI/NISO Z39.104). → [Capítulo 4](04-equipos.qmd)
+
+### Autoría honoraria {#gl-honoraria}
+Firmar un trabajo sin haber contribuido de forma sustancial. → [Capítulo 4](04-equipos.qmd)
+
+## Proyectos y financiación
+
+### Objetivo SMART {#gl-smart}
+Objetivo específico, medible, alcanzable, relevante y con plazo. → [Capítulo 5](05-proyectos.qmd)
+
+### Paquete de trabajo {#gl-paquete}
+Conjunto de tareas relacionadas con un responsable y unos entregables. → [Capítulo 5](05-proyectos.qmd)
+
+### Hito {#gl-hito}
+Momento de control del proyecto. → [Capítulo 5](05-proyectos.qmd)
+
+### Entregable {#gl-entregable}
+Producto concreto del proyecto: datos, informe, artículo, software. → [Capítulo 5](05-proyectos.qmd)
+
+### Diagrama de Gantt {#gl-gantt}
+Representación de las tareas de un proyecto en el tiempo. → [Capítulo 5](05-proyectos.qmd)
+
+### Matriz de riesgos {#gl-riesgos}
+Valoración de los riesgos por su probabilidad y su impacto. → [Capítulo 5](05-proyectos.qmd)
+
+### Plan de gestión de datos {#gl-pgd}
+Documento que describe cómo se recogerán, guardarán, compartirán y preservarán los datos. → [Capítulo 5](05-proyectos.qmd)
+
+## Decidir y negociar
+
+### Heurística {#gl-heuristica}
+Atajo mental que simplifica un juicio y puede producir errores sistemáticos. → [Capítulo 6](06-decidir.qmd)
+
+### Anclaje {#gl-anclaje}
+Tendencia a ajustar poco a partir de un valor inicial. → [Capítulo 6](06-decidir.qmd)
+
+### Disponibilidad {#gl-disponibilidad}
+Juzgar la frecuencia de algo por la facilidad con que se recuerdan ejemplos. → [Capítulo 6](06-decidir.qmd)
+
+### Matriz de decisión {#gl-matriz}
+Tabla que puntúa las opciones en criterios ponderados por su importancia. → [Capítulo 6](06-decidir.qmd)
+
+### Premortem {#gl-premortem}
+Ejercicio de imaginar que un proyecto ha fracasado para identificar sus causas. → [Capítulo 6](06-decidir.qmd)
+
+### Intereses y posiciones {#gl-intereses}
+La posición es lo que se pide; el interés, el motivo por el que se pide. → [Capítulo 6](06-decidir.qmd)
+
+### MAAN {#gl-maan}
+Mejor alternativa a un acuerdo negociado (BATNA). → [Capítulo 6](06-decidir.qmd)

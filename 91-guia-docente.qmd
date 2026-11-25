@@ -1,0 +1,40 @@
+---
+engine: markdown
+---
+
+# Guía para el profesorado {#sec-guia}
+
+El libro sirve como manual de un seminario de doctorado de unas 18-24 horas (seis sesiones) sobre competencias de estrategia, liderazgo y gestión, o como lectura autónoma. Cada capítulo combina una lectura obligatoria, un laboratorio, actividades y un reto aplicado a la situación real de cada participante.
+
+## Propuesta de evaluación
+
+| Actividad | Peso orientativo |
+|---|---|
+| Retos evaluables (elegir 4 de 6) | 60 % |
+| Presentación final: plan estratégico a tres años | 25 % |
+| Autoevaluaciones y participación | 15 % |
+
+La rúbrica común valora el análisis de la situación (25 %), el uso de marcos y evidencia (25 %), la viabilidad del plan (25 %), la reflexión personal (15 %) y la claridad (10 %).
+
+## Actividades interactivas y laboratorios
+
+Laboratorios: cartera de problemas (matriz de Alon), reparto del tiempo semanal, perfil de conductas de liderazgo, declaración de contribuciones CRediT, matriz de riesgos y matriz de decisión ponderada. Escenarios: una oferta de empleo inesperada, un error en los datos y la negociación del orden de autoría. En el PDF y el EPUB, las actividades aparecen en papel con su solución.
+
+## Recomendaciones
+
+Muchos retos tocan la situación personal y laboral de los participantes: conviene que la entrega pueda ser **anónima o ficticia** cuando la persona lo prefiera, y no pedir información sobre conflictos reales con terceros identificables. El laboratorio de liderazgo propone pedir valoraciones a otras personas: es opcional y puede sustituirse por una autoevaluación razonada.
+
+## Autoevaluación en Aula Global y diapositivas
+
+Las preguntas están exportadas a **Moodle XML** en `moodle/`. Las diapositivas de cada capítulo están en [diapositivas/](diapositivas/index.html){target="_blank"}.
+
+## Mantenimiento
+
+```bash
+python3 herramientas/preparar.py
+python3 herramientas/moodle.py
+python3 herramientas/figuras.py
+python3 herramientas/pdf.py
+quarto render
+python3 herramientas/diapositivas.py
+```
