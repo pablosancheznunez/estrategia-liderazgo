@@ -1,0 +1,76 @@
+---
+engine: markdown
+---
+
+# Laboratorio interactivo {#sec-laboratorio}
+
+Este apéndice reúne un laboratorio y un escenario ramificado para practicar en tu navegador.
+
+## Laboratorio: la matriz de Eisenhower {#lab-eisenhower}
+
+::: {.laboratorio}
+::: {.laboratorio-etiqueta}
+Laboratorio · se ejecuta en tu navegador
+:::
+
+Escribe tus tareas de la semana (o usa las de ejemplo) y marca si son **urgentes** e **importantes**. La matriz las coloca en su cuadrante y te sugiere qué hacer con cada grupo.
+
+```{ojs}
+//| echo: false
+{
+  const ejemplo = [["Revisar la versión final del artículo", true, true], ["Responder correos de la lista del departamento", true, false], ["Escribir la introducción del proyecto (convocatoria en 3 meses)", false, true], ["Leer un artículo clave para la tesis", false, true], ["Reunión semanal sin orden del día", true, false], ["Rellenar el informe de seguimiento que vence mañana", true, true], ["Revisar redes sociales académicas", false, false], ["Preparar la formación de la doctoranda nueva", false, true]];
+  const raiz = html`<div class="eisen-lab"></div>`;
+  const tabla = html`<table class="table table-sm align-middle"><thead><tr><th scope="col">Tarea</th><th scope="col">Urgente</th><th scope="col">Importante</th></tr></thead><tbody></tbody></table>`;
+  const filas = ejemplo.map(([t, u, i], k) => { const id = "eh" + k + Math.random().toString(36).slice(2, 6); const tr = html`<tr><td><label class="visually-hidden" for="${id}t">Tarea ${k + 1}</label><input id="${id}t" class="form-control form-control-sm" value="${t}"></td><td><input type="checkbox" class="form-check-input" aria-label="Tarea ${k + 1} urgente" ${u ? "checked" : ""}></td><td><input type="checkbox" class="form-check-input" aria-label="Tarea ${k + 1} importante" ${i ? "checked" : ""}></td></tr>`; tabla.tBodies[0].append(tr); return tr.querySelectorAll("input"); });
+  const salida = html`<div role="status" aria-live="polite"></div>`;
+  const esc = (s) => s.replace(/[&<>]/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;"}[c]));
+  const cuad = [["Hacer ya", "Urgente e importante", true, true, "#fde2e1"], ["Planificar", "Importante, no urgente", false, true, "#e2f0e5"], ["Delegar o acotar", "Urgente, no importante", true, false, "#fdf1d8"], ["Eliminar", "Ni urgente ni importante", false, false, "#ebebeb"]];
+  function dibujar() {
+    const tareas = filas.map(([t, u, i]) => ({t: t.value.trim(), u: u.checked, i: i.checked})).filter((x) => x.t);
+    const grupos = cuad.map(([n, desc, u, i, c]) => ({n, desc, c, ts: tareas.filter((x) => x.u === u && x.i === i)}));
+    const consejo = grupos[0].ts.length > grupos[1].ts.length ? "Tienes más tareas en «Hacer ya» que en «Planificar»: vives apagando fuegos. Reserva bloques fijos para lo importante antes de que se vuelva urgente." : grupos[1].ts.length ? "Bien: lo importante no urgente tiene espacio. Ponle fecha y hora en tu agenda; si no, lo urgente lo desplazará." : "No tienes tareas importantes a largo plazo: ¿dónde está tu tesis, tu próximo proyecto o tu formación?";
+    salida.innerHTML = `<div class="row g-2">${grupos.map((g) => `<div class="col-6"><div class="p-2 rounded h-100" style="background:${g.c};color:#0b0b0b"><strong>${g.n}</strong> <span class="small">(${g.desc})</span><ul class="mb-0 small">${g.ts.map((x) => `<li>${esc(x.t)}</li>`).join("") || "<li><em>ninguna</em></li>"}</ul></div></div>`).join("")}</div><p class="mt-2">${consejo}</p>`;
+  }
+  filas.forEach((f) => f.forEach((e) => e.addEventListener("input", dibujar)));
+  raiz.append(tabla, salida); dibujar();
+  return raiz;
+}
+```
+:::
+
+## Escenario: un conflicto por la autoría
+
+::: {.escenario #ia-lab-autoria titulo="¿Quién firma el artículo?"}
+Diriges un pequeño equipo. A punto de enviar un artículo, Laura, que hizo todo el trabajo de campo, descubre que va a figurar en cuarto lugar, detrás de un colega que solo revisó el texto. Viene a tu despacho molesta.
+
+### Primera conversación {#ea-inicio}
+¿Qué haces?
+
+- [Escucho sin interrumpir y le pido que me explique qué hizo en cada fase](#ea-escucha)
+- [Le explico que el orden lo decide la jerarquía del grupo](#ea-jerarquia)
+- [Le digo que lo hablaremos después del envío para no retrasarlo](#ea-pospone)
+
+### Escuchas {#ea-escucha}
+Laura detalla su contribución. ¿Cómo decides el orden?
+
+- [Propongo que todo el equipo rellene una declaración CRediT y acordemos el orden con ella](#ea-credit)
+- [Decido yo el orden según lo que me ha contado Laura](#ea-unilateral)
+
+### Criterios compartidos {#ea-credit .final .bien}
+Con CRediT cada contribución queda explícita, y el orden se acuerda con criterios conocidos. Laura pasa al segundo lugar, el colega queda en los agradecimientos, y el equipo adopta un **acuerdo de autoría** al empezar cada proyecto. Has resuelto el conflicto y prevenido los siguientes.
+
+### Decisión unilateral {#ea-unilateral .final .regular}
+Quizá aciertes, pero el resto del equipo no entiende el criterio y el problema volverá. Haz explícitos los criterios (CRediT, ICMJE) y acuérdalos con todas las personas autoras.
+
+### Jerarquía {#ea-jerarquia .final .mal}
+La autoría debe reflejar las contribuciones, no el rango. Laura pierde la confianza en ti, y el grupo, el compromiso de quien hace el trabajo.
+
+### Posponer {#ea-pospone .final .mal}
+Una vez enviado, cambiar el orden es mucho más difícil, y el mensaje es que su preocupación no importa. Los conflictos de autoría se resuelven **antes** del envío.
+:::
+
+## Para ver y seguir aprendiendo
+
+Son enlaces, no vídeos incrustados: el vídeo se abre en la web de quien lo publica, así esta página no carga rastreadores de terceros. La mayoría está en inglés; activa los subtítulos si los necesitas.
+
+- **[Building a psychologically safe workplace](https://www.youtube.com/watch?v=LhoLuui9gX8)** — Amy Edmondson · TEDxHGSE (2014). La investigadora que acuñó el concepto explica cómo crear seguridad psicológica en un equipo.
