@@ -30,9 +30,9 @@ Edmondson, A. (1999). [Psychological safety and learning behavior in work teams]
 
 ### Lecturas complementarias {.unnumbered}
 
-- Wuchty, S.; Jones, B. F.; Uzzi, B. (2007). [The increasing dominance of teams in production of knowledge](https://doi.org/10.1126/science.1136099). *Science*, 316(5827), 1036-1039.
-- Lee, A. (2008). [How are doctoral students supervised? Concepts of doctoral research supervision](https://doi.org/10.1080/03075070802049202). *Studies in Higher Education*, 33(3), 267-281.
-- Allen, L.; Scott, J.; Brand, A.; Hlava, M.; Altman, M. (2014). [Publishing: Credit where credit is due](https://doi.org/10.1038/508312a). *Nature*, 508(7496), 312-313.
+- @wuchty2007
+- @lee2008
+- @allen2014
 
 ## 1. La ciencia es un trabajo de equipo
 
@@ -40,7 +40,7 @@ Wuchty, Jones y Uzzi (2007) analizaron casi veinte millones de artículos y dos 
 
 ## 2. Qué hace que un equipo aprenda
 
-Edmondson (1999) estudió 51 equipos de una empresa industrial. Los que más **aprendían** (pedían ayuda, comentaban errores, buscaban retroalimentación, experimentaban) eran los que tenían más **seguridad psicológica**: la creencia compartida de que en el equipo se pueden asumir riesgos interpersonales sin temor a ser humillado o castigado. Y ese aprendizaje se asociaba a un mejor rendimiento.
+@edmondson1999 estudió 51 equipos de una empresa industrial. Los que más **aprendían** (pedían ayuda, comentaban errores, buscaban retroalimentación, experimentaban) eran los que tenían más **seguridad psicológica**: la creencia compartida de que en el equipo se pueden asumir riesgos interpersonales sin temor a ser humillado o castigado. Y ese aprendizaje se asociaba a un mejor rendimiento.
 
 En un grupo de investigación, la seguridad psicológica se nota en que alguien se atreve a decir «creo que el análisis tiene un error», «no entiendo esto» o «el experimento no ha salido». Sin ella, los errores se esconden, con consecuencias para la calidad científica.
 
@@ -53,7 +53,7 @@ Cómo fomentarla quien dirige:
 
 ## 3. La supervisión doctoral
 
-Lee (2008) entrevistó a directores de tesis e identificó cinco concepciones de la supervisión, que conviven en distinta proporción:
+@lee2008 entrevistó a directores de tesis e identificó cinco concepciones de la supervisión, que conviven en distinta proporción:
 
 | Concepción | El director se centra en | Riesgo si es la única |
 |---|---|---|
@@ -67,7 +67,7 @@ Un **acuerdo de supervisión** escrito al empezar (frecuencia de reuniones, plaz
 
 ## 4. Repartir el crédito: CRediT
 
-La **taxonomía CRediT** (Allen et al., 2014; hoy norma ANSI/NISO) describe 14 roles de contribución. Muchas revistas piden una declaración de contribuciones con ella. No sustituye a los criterios de autoría (por ejemplo, los del ICMJE), pero hace visible quién hizo qué y ayuda a evitar la **autoría honoraria** (firmar sin haber contribuido) y la autoría fantasma (contribuir sin firmar).
+La **taxonomía CRediT** [@allen2014; hoy norma ANSI/NISO) describe 14 roles de contribución. Muchas revistas piden una declaración de contribuciones con ella. No sustituye a los criterios de autoría (por ejemplo, los del ICMJE), pero hace visible quién hizo qué y ayuda a evitar la **autoría honoraria** (firmar sin haber contribuido) y la autoría fantasma (contribuir sin firmar).
 
 ## Laboratorio: declaración de contribuciones CRediT {#lab-e4-credit}
 
@@ -121,6 +121,34 @@ Tres doctorandos y una posdoc preparan un artículo. Al empezar, la posdoc propo
 Cuando uno de los doctorandos asume más análisis de lo previsto, el acuerdo se revisa sin conflicto porque existía un criterio compartido. Lo que se evita: discutir la autoría al final, cuando ya hay tensión.
 :::
 
+## Segundo caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Una reunión de equipo que aprende
+Un grupo de cinco personas termina un proyecto con un retraso de tres meses. En lugar de buscar culpables, la coordinadora organiza una **revisión posterior** (*after-action review*) de 45 minutos con cuatro preguntas:
+
+1. **¿Qué esperábamos que pasara?** Recoger los datos en dos meses.
+2. **¿Qué pasó?** Se tardaron cinco: el comité de ética pidió cambios y nadie lo había previsto.
+3. **¿Por qué hubo diferencia?** El calendario no tenía margen para la revisión ética, y la persona que lo sabía no se atrevió a decirlo en la planificación.
+4. **¿Qué haremos distinto?** Añadir la revisión ética al cronograma con un mes de margen y abrir cada planificación con una ronda en la que todos señalen un riesgo.
+
+La cuarta pregunta es la que importa. La segunda medida ataca algo más profundo que el calendario: la **seguridad psicológica**, que alguien con información crítica se sienta capaz de darla.
+:::
+
+```{dot}
+//| label: fig-e4-aar
+//| fig-cap: "La revisión posterior: cuatro preguntas que convierten un fallo en aprendizaje."
+//| fig-alt: "Ciclo de cuatro pasos: qué esperábamos, qué pasó, por qué hubo diferencia y qué haremos distinto, que vuelve al siguiente proyecto."
+digraph {
+  bgcolor="white"; pad=0.2; rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#1a4d8f", fontname="Helvetica", fontsize=11];
+  edge [color="#45433f", fontname="Helvetica", fontsize=10];
+  rankdir=TB;
+  e [label="1. ¿Qué esperábamos?"]; p [label="2. ¿Qué pasó?"]; q [label="3. ¿Por qué la diferencia?"]; h [label="4. ¿Qué haremos distinto?", fillcolor="#eaf6ef"]; s [label="Siguiente proyecto", shape=ellipse];
+  e -> p -> q -> h -> s; s -> e [style=dashed];
+}
+```
+
 ## Ejercicios graduados
 
 **Básico.** ¿Cuándo conviene acordar los criterios de autoría?
@@ -138,7 +166,7 @@ Debe asignar roles por persona, criterios para el orden de firma, cuándo se rev
 
 ## Actividades
 
-::: {.clasificar #ia-e4-lee titulo="¿Qué concepción de la supervisión (Lee, 2008)?" categorias="Funcional|Enculturación|Pensamiento crítico|Emancipación|Desarrollo de la relación"}
+::: {.clasificar #ia-e4-lee titulo="¿Qué concepción de la supervisión [@lee2008]?" categorias="Funcional|Enculturación|Pensamiento crítico|Emancipación|Desarrollo de la relación"}
 - Revisar cada mes el cronograma y los requisitos del programa → Funcional
 - Llevar a la doctoranda a congresos y presentarle a colegas del campo → Enculturación
 - Pedir que defienda cada decisión metodológica ante objeciones → Pensamiento crítico
@@ -156,7 +184,7 @@ Un doctorando de tu equipo descubre, una semana antes de enviar el artículo, qu
 - [«Gracias por decírmelo a tiempo. Veamos qué afecta y qué hacemos»](#e4e-gracias)
 
 ### Culpa {#e4e-culpa .final .mal}
-El mensaje que recibe el equipo es que traer malas noticias tiene un coste. La próxima vez, quizá nadie diga nada. Es lo contrario de la seguridad psicológica (Edmondson, 1999).
+El mensaje que recibe el equipo es que traer malas noticias tiene un coste. La próxima vez, quizá nadie diga nada. Es lo contrario de la seguridad psicológica [@edmondson1999].
 
 ### Reconocimiento {#e4e-gracias}
 Revisáis el alcance: cambian dos resultados secundarios. ¿Qué haces?
@@ -187,9 +215,9 @@ Corriges, documentas y conviertes el incidente en una mejora del procedimiento (
 Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
 
 ::: {.webex-check .webex-box}
-1. Wuchty et al. (2007) encontraron que la proporción de trabajos en equipo crece en casi todas las disciplinas. {{< torf true >}}
+1. @wuchty2007 encontraron que la proporción de trabajos en equipo crece en casi todas las disciplinas. {{< torf true >}}
 2. La creencia compartida de que se pueden asumir riesgos interpersonales sin miedo es la seguridad {{< fitb "psicológica" "psicologica" ignorecase=true >}}
-3. Según Edmondson (1999), la seguridad psicológica favorece {{< mcq "la competencia interna" "*el aprendizaje del equipo" "la jerarquía" >}}
+3. Según @edmondson1999, la seguridad psicológica favorece {{< mcq "la competencia interna" "*el aprendizaje del equipo" "la jerarquía" >}}
 4. La taxonomía CRediT tiene {{< mcq "6" "10" "*14" >}} roles
 5. Obtener la financiación basta, por sí solo, para ser autor según el ICMJE. {{< torf false >}}
 6. Firmar un trabajo sin haber contribuido es autoría {{< fitb "honoraria" "regalada" ignorecase=true >}}
@@ -206,6 +234,6 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 - ANSI/NISO Z39.104.
 - Mejor en los agradecimientos.
 - *Gift authorship*.
-- Lee (2008).
+- @lee2008
 - Un acuerdo de supervisión.
 :::

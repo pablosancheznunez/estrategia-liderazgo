@@ -30,7 +30,7 @@ Tversky, A.; Kahneman, D. (1974). [Judgment under uncertainty: Heuristics and bi
 
 ## 1. Atajos que engañan
 
-Tversky y Kahneman (1974) mostraron que, al juzgar probabilidades, usamos **heurísticas** (atajos mentales) que suelen funcionar, pero producen errores sistemáticos:
+@tversky1974 mostraron que, al juzgar probabilidades, usamos **heurísticas** (atajos mentales) que suelen funcionar, pero producen errores sistemáticos:
 
 | Heurística | Qué hacemos | Ejemplo en investigación |
 |---|---|---|
@@ -119,6 +119,33 @@ Te ofrecen un posdoc de dos años. Preparación:
 Resultado: no se negocia solo el salario (fijado por convocatoria), sino condiciones que importan a ambas partes.
 :::
 
+## Segundo caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Un premortem antes de elegir
+Un grupo duda entre dos opciones para su próximo estudio: una encuesta propia o reutilizar datos abiertos. Para evitar el exceso de confianza, la coordinadora propone un **premortem**: «Imaginad que es dentro de dos años y el proyecto ha fracasado. Escribid en cinco minutos por qué».
+
+| Opción | Causas imaginadas del fracaso (más repetidas) |
+|---|---|
+| Encuesta propia | Tasa de respuesta baja; el cuestionario no estaba validado; se agotó el presupuesto |
+| Datos abiertos | Las variables no medían lo que necesitábamos; la fuente cambió su formato |
+
+El ejercicio no decide por ellos, pero cambia la conversación: para la encuesta, el riesgo principal (la tasa de respuesta) es difícil de controlar; para los datos abiertos, el riesgo principal se puede comprobar **antes** de empezar, revisando el libro de códigos. Deciden reutilizar los datos, tras una semana de verificación de las variables, y guardar la encuesta como estudio complementario.
+:::
+
+```{dot}
+//| label: fig-e6-premortem
+//| fig-cap: "El premortem: imaginar el fracaso para detectar riesgos a tiempo."
+//| fig-alt: "Diagrama: decisión pendiente, imaginar que ha fracasado, listar causas, comprobar cuáles se pueden verificar ahora y decidir."
+digraph {
+  bgcolor="white"; pad=0.2; rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#1a4d8f", fontname="Helvetica", fontsize=11];
+  edge [color="#45433f", fontname="Helvetica", fontsize=10];
+  d [label="Decisión pendiente"]; f [label="Imaginar el fracaso\n(5 minutos)"]; c [label="Listar causas"]; v [label="¿Se pueden comprobar\nantes de empezar?", shape=diamond, fillcolor="#fff7e0"]; x [label="Decidir con\nesa información", fillcolor="#eaf6ef"];
+  d -> f -> c -> v -> x;
+}
+```
+
 ## Ejercicios graduados
 
 **Básico.** ¿Qué es tu MAAN en el caso?
@@ -191,7 +218,7 @@ Opciones de beneficio mutuo con criterios objetivos (CRediT, normas de la revist
 Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
 
 ::: {.webex-check .webex-box}
-1. Según Tversky y Kahneman (1974), las heurísticas nunca son útiles. {{< torf false >}}
+1. Según @tversky1974, las heurísticas nunca son útiles. {{< torf false >}}
 2. Juzgar la frecuencia por la facilidad con que se recuerdan casos es la heurística de {{< fitb "disponibilidad" ignorecase=true >}}
 3. Subestimar el tiempo de tus propios proyectos es la falacia de la {{< fitb "planificación" "planificacion" ignorecase=true >}}
 4. En un premortem se imagina que el proyecto {{< mcq "ha tenido éxito" "*ha fracasado" "no ha empezado" >}}

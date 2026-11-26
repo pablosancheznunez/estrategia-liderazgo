@@ -40,7 +40,7 @@ En investigación, una buena estrategia responde a tres preguntas:
 
 ## 2. Elegir problemas
 
-Alon (2009) propone valorar cada problema en dos ejes: **dificultad** (cuánto tiempo y esfuerzo exige) y **ganancia de conocimiento** (cuánto avanzaría la comprensión si sale bien). Para un doctorando, conviene empezar por problemas **fáciles y de interés moderado o alto**, que permiten aprender y publicar; los problemas difíciles y de gran interés son apuestas de largo plazo para cuando hay experiencia. Insiste además en dos ideas:
+@alon2009 propone valorar cada problema en dos ejes: **dificultad** (cuánto tiempo y esfuerzo exige) y **ganancia de conocimiento** (cuánto avanzaría la comprensión si sale bien). Para un doctorando, conviene empezar por problemas **fáciles y de interés moderado o alto**, que permiten aprender y publicar; los problemas difíciles y de gran interés son apuestas de largo plazo para cuando hay experiencia. Insiste además en dos ideas:
 
 - **Elige con calma.** Dedica tiempo explícito (semanas, no horas) a elegir el problema; es la decisión con más consecuencias.
 - **Escúchate.** El interés propio es un buen predictor de que perseverarás cuando haya dificultades.
@@ -115,6 +115,36 @@ Una posdoc tiene cinco ideas y tiempo para dos o tres este año. Aplicando la ma
 El criterio explícito ayuda a decir que no sin culpa: cada sí tiene un coste de oportunidad.
 :::
 
+## Segundo caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Un DAFO que termina en decisiones
+Un grupo pequeño de documentación (tres personas) prepara su plan a tres años. Su DAFO inicial es una lista de 20 puntos que no lleva a ninguna parte. Lo rehacen cruzando los cuadrantes, que es donde el análisis se convierte en estrategia:
+
+| Cruce | Pregunta | Decisión |
+|---|---|---|
+| Fortaleza × oportunidad | ¿Qué fortaleza nos deja aprovechar una oportunidad? | Tenemos datos propios de repositorios y hay una convocatoria sobre ciencia abierta: **solicitarla**. |
+| Debilidad × oportunidad | ¿Qué debilidad nos impide aprovecharla? | Nadie programa con soltura: **formación en R** el primer semestre. |
+| Fortaleza × amenaza | ¿Qué fortaleza nos protege? | Colaboración estable con un grupo extranjero: **coautorías** si se recorta la financiación nacional. |
+| Debilidad × amenaza | ¿Qué combinación nos pone en riesgo? | Todo depende de una persona con contrato temporal: **documentar procesos** y repartir tareas. |
+
+El resultado son cuatro decisiones con responsable y fecha, no veinte observaciones. Si un punto del DAFO no cambia ninguna decisión, sobra.
+:::
+
+```{dot}
+//| label: fig-e1-dafo-cruce
+//| fig-cap: "Del DAFO a las decisiones: cada cruce de cuadrantes sugiere un tipo de acción."
+//| fig-alt: "Diagrama con cuatro cajas: fortalezas, debilidades, oportunidades y amenazas. Las flechas cruzan cada factor interno con cada externo y llevan a cuatro tipos de acción: aprovechar, corregir, defender y reducir el riesgo."
+digraph {
+  bgcolor="white"; pad=0.2; rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#1a4d8f", fontname="Helvetica", fontsize=11];
+  edge [color="#45433f", fontname="Helvetica", fontsize=10];
+  F [label="Fortalezas"]; D [label="Debilidades"]; O [label="Oportunidades", fillcolor="#eaf6ef"]; A [label="Amenazas", fillcolor="#fdf0e8"];
+  a1 [label="Aprovechar\n(FO)", shape=ellipse]; a2 [label="Corregir\n(DO)", shape=ellipse]; a3 [label="Defender\n(FA)", shape=ellipse]; a4 [label="Reducir riesgo\n(DA)", shape=ellipse];
+  F -> a1; O -> a1; D -> a2; O -> a2; F -> a3; A -> a3; D -> a4; A -> a4;
+}
+```
+
 ## Ejercicios graduados
 
 **Básico.** ¿Qué hacer con una idea de dificultad 5 y ganancia 2?
@@ -166,7 +196,7 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 
 ::: {.webex-check .webex-box}
 1. Lo esencial de una estrategia es decidir también qué no se hace. {{< torf true >}}
-2. Alon (2009) valora los problemas según su dificultad y su {{< mcq "coste económico" "*ganancia de conocimiento" "número de citas esperado" >}}
+2. @alon2009 valora los problemas según su dificultad y su {{< mcq "coste económico" "*ganancia de conocimiento" "número de citas esperado" >}}
 3. Para empezar un doctorado, Alon recomienda sobre todo problemas {{< mcq "difíciles y de gran interés" "*viables y de interés moderado o alto" "fáciles y sin interés" >}}
 4. Lo que se deja de hacer al aceptar un proyecto es su coste de {{< fitb "oportunidad" ignorecase=true >}}
 5. En el DAFO, las oportunidades y las amenazas son factores externos. {{< torf true >}}

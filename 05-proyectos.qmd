@@ -82,7 +82,7 @@ viewof riesgos = area("Riesgos del proyecto", {rows: 5, submit: "Valorar", value
 
 ## 3. Conseguir financiación
 
-Bourne y Chalupa (2006) resumen en diez reglas lo que separa las solicitudes financiadas de las demás. Entre ellas:
+@bourne2006 resumen en diez reglas lo que separa las solicitudes financiadas de las demás. Entre ellas:
 
 - **Lee las bases** y la convocatoria con detalle; ajusta la propuesta a lo que el financiador quiere financiar.
 - **Habla con la agencia** o con quien gestiona el programa cuando sea posible.
@@ -102,6 +102,36 @@ Proyecto de 24 meses, tres paquetes de trabajo. Primera versión: todo encadenad
 3. **Margen:** 10-15 % del tiempo de la ruta crítica (unos tres meses) al final.
 4. **Hitos de control** en los meses 6, 12 y 18, con decisiones previstas si hay retrasos (reducir el alcance, priorizar resultados).
 :::
+
+## Segundo caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Una matriz de riesgos para una solicitud
+Un equipo prepara la solicitud de un proyecto de tres años. La convocatoria pide un plan de contingencia. Valoran cada riesgo por **probabilidad** y **impacto** (de 1 a 3) y priorizan por el producto:
+
+| Riesgo | P | I | P × I | Medida |
+|---|---|---|---|---|
+| No se contrata a tiempo al personal | 3 | 3 | **9** | Empezar con tareas que puede hacer el equipo actual |
+| Una fuente de datos cambia sus condiciones de uso | 2 | 3 | **6** | Identificar una fuente alternativa y guardar copias |
+| Baja de una investigadora clave | 1 | 3 | 3 | Documentar procesos; repartir conocimientos |
+| Retraso en la revisión ética | 2 | 1 | 2 | Margen de un mes en el cronograma |
+
+Los dos primeros riesgos reciben una medida concreta en la memoria y una persona responsable. Los evaluadores no esperan un proyecto sin riesgos, sino uno que los conozca y sepa qué hará.
+:::
+
+```{dot}
+//| label: fig-e5-riesgos
+//| fig-cap: "Priorizar riesgos por probabilidad e impacto."
+//| fig-alt: "Diagrama que lleva de la lista de riesgos a una valoración de probabilidad por impacto y, según el resultado, a medidas preventivas para los riesgos altos y a vigilancia para los bajos."
+digraph {
+  bgcolor="white"; pad=0.2; rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#1a4d8f", fontname="Helvetica", fontsize=11];
+  edge [color="#45433f", fontname="Helvetica", fontsize=10];
+  L [label="Lista de riesgos"]; V [label="Probabilidad × impacto"];
+  Al [label="Alto (≥ 6)\nmedida y responsable", fillcolor="#fdf0e8"]; B [label="Bajo (< 6)\nvigilar", fillcolor="#eaf6ef"];
+  L -> V; V -> Al; V -> B;
+}
+```
 
 ## Ejercicios graduados
 
@@ -164,7 +194,7 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 2. Un entregable es un producto concreto del proyecto. {{< torf true >}}
 3. Un momento de control del proyecto es un {{< fitb "hito" ignorecase=true >}}
 4. En una matriz de riesgos se valora la probabilidad y el {{< fitb "impacto" ignorecase=true >}}
-5. Bourne y Chalupa (2006) recomiendan escribir para un evaluador {{< mcq "experto que lo lee todo con calma" "*con poco tiempo que lee muchas solicitudes" "que no conoce el tema y no lo va a leer" >}}
+5. @bourne2006 recomiendan escribir para un evaluador {{< mcq "experto que lo lee todo con calma" "*con poco tiempo que lee muchas solicitudes" "que no conoce el tema y no lo va a leer" >}}
 6. Si una solicitud es rechazada, lo mejor es no volver a presentarla. {{< torf false >}}
 7. El gráfico que muestra las tareas en el tiempo es el diagrama de {{< fitb "Gantt" ignorecase=true >}}
 8. ¿Qué hacer con un riesgo de probabilidad e impacto altos?

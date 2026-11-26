@@ -30,7 +30,7 @@ Sauermann, H.; Roach, M. (2012). [Science PhD career preferences: Levels, change
 
 ## 1. Muchos caminos, una minoría académica
 
-Sauermann y Roach (2012) encuestaron a miles de doctorandos de ciencias en universidades de Estados Unidos. La carrera académica era la preferida por muchos al empezar, pero ese interés **disminuía a lo largo del doctorado**, mientras crecía el interés por la industria y otros caminos. Además, los doctorandos percibían que sus directores animaban **más** la carrera académica que las demás. Es una conclusión importante: las plazas académicas estables son muchas menos que los doctores que se forman, y la mayoría trabajará fuera de la universidad.
+@sauermann2012 encuestaron a miles de doctorandos de ciencias en universidades de Estados Unidos. La carrera académica era la preferida por muchos al empezar, pero ese interés **disminuía a lo largo del doctorado**, mientras crecía el interés por la industria y otros caminos. Además, los doctorandos percibían que sus directores animaban **más** la carrera académica que las demás. Es una conclusión importante: las plazas académicas estables son muchas menos que los doctores que se forman, y la mayoría trabajará fuera de la universidad.
 
 | Camino | Qué valora | Cómo prepararlo |
 |---|---|---|
@@ -113,6 +113,42 @@ Doctorando de tercer año interesado en la academia y en la gestión de la cienc
 - **Revisión:** en junio, con la directora y con el mentor.
 :::
 
+## Segundo caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Una semana tipo con la matriz de Eisenhower
+Un doctorando de tercer año anota durante una semana en qué se le va el tiempo y clasifica cada bloque según la matriz importante/urgente:
+
+| Cuadrante | Horas | Ejemplos |
+|---|---|---|
+| Importante y urgente | 6 | Revisión de un artículo con fecha límite |
+| **Importante, no urgente** | **4** | Escribir la tesis, aprender un método nuevo |
+| Urgente, no importante | 14 | Correos, peticiones de última hora, reuniones sin orden del día |
+| Ni urgente ni importante | 8 | Redes sociales, reorganizar carpetas |
+
+El diagnóstico es claro: la tesis, que es lo que define su carrera, recibe 4 de 32 horas. Las decisiones que toma:
+
+1. **Dos bloques fijos de tres horas** a la semana para escribir, a primera hora y sin correo.
+2. **Correo dos veces al día**, con respuestas breves.
+3. Pide **orden del día** antes de aceptar una reunión.
+
+Tres semanas después, el bloque «importante, no urgente» ha pasado de 4 a 10 horas. Lo urgente no desaparece, pero deja de decidir por él.
+:::
+
+```{dot}
+//| label: fig-e2-eisenhower
+//| fig-cap: "Reasignar tiempo: lo que sale de lo urgente sin importancia se protege para lo importante."
+//| fig-alt: "Diagrama de flujo: las horas de urgente no importante y de ni urgente ni importante se reducen y se trasladan al cuadrante importante no urgente, donde se crean bloques fijos de escritura."
+digraph {
+  bgcolor="white"; pad=0.2; rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#1a4d8f", fontname="Helvetica", fontsize=11];
+  edge [color="#45433f", fontname="Helvetica", fontsize=10];
+  U [label="Urgente, no importante\n14 h", fillcolor="#fdf0e8"]; N [label="Ni urgente ni importante\n8 h", fillcolor="#fdf0e8"];
+  I [label="Importante, no urgente\n4 h → 10 h", fillcolor="#eaf6ef"]; B [label="Bloques fijos\nde escritura"];
+  U -> I [label="correo 2 veces/día"]; N -> I [label="límites"]; I -> B;
+}
+```
+
 ## Ejercicios graduados
 
 **Básico.** ¿Es SMART el objetivo «mejorar mi CV»? Reescríbelo.
@@ -148,7 +184,7 @@ Estás en el tercer año de doctorado. Una empresa te ofrece un puesto de analis
 - [Explorar ambas opciones: hablar con gente de los dos mundos y revisar tus prioridades](#e2e-explorar)
 
 ### Decisión por defecto {#e2e-rechazo .final .mal}
-Decides sin información, por inercia. Sauermann y Roach (2012) muestran que muchos doctorandos cambian de preferencias y que el entorno empuja hacia la academia; conviene decidir con datos propios.
+Decides sin información, por inercia. @sauermann2012 muestran que muchos doctorandos cambian de preferencias y que el entorno empuja hacia la academia; conviene decidir con datos propios.
 
 ### Explorar {#e2e-explorar}
 Has hablado con varias personas. ¿Cómo tratas el tema con tu director?
@@ -179,7 +215,7 @@ Una buena supervisión apoya los objetivos de la persona supervisada, no solo lo
 Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la nota.
 
 ::: {.webex-check .webex-box}
-1. Según Sauermann y Roach (2012), el interés por la carrera académica tiende a {{< mcq "aumentar durante el doctorado" "*disminuir durante el doctorado" "mantenerse igual" >}}
+1. Según @sauermann2012, el interés por la carrera académica tiende a {{< mcq "aumentar durante el doctorado" "*disminuir durante el doctorado" "mantenerse igual" >}}
 2. La mayoría de las personas doctoradas trabajará en la universidad. {{< torf false >}}
 3. La comunicación, la gestión o la docencia son competencias {{< fitb "transferibles" ignorecase=true >}}
 4. Un plan individual de desarrollo se revisa de forma periódica. {{< torf true >}}

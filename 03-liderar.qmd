@@ -32,7 +32,7 @@ Day, D. V.; Fleenor, J. W.; Atwater, L. E.; Sturm, R. E.; McKee, R. A. (2014). [
 
 El **liderazgo** es un proceso de influencia para que un grupo alcance objetivos compartidos. No depende del cargo: una doctoranda que organiza un seminario, coordina una base de datos común o media en un conflicto ejerce liderazgo.
 
-Day et al. (2014) distinguen dos cosas que a menudo se confunden:
+@day2014 distinguen dos cosas que a menudo se confunden:
 
 - **Desarrollo del líder**: ampliar las capacidades de una persona (autoconocimiento, regulación emocional, competencias sociales, identidad como líder). Es **capital humano**.
 - **Desarrollo del liderazgo**: ampliar la capacidad de un **grupo** para trabajar juntos (confianza, redes, compromiso mutuo). Es **capital social**.
@@ -112,6 +112,34 @@ Una doctoranda organiza el seminario mensual de su programa. No tiene autoridad 
 Resultado: más asistencia y presentaciones más tempranas (menos «trabajo acabado»).
 :::
 
+## Segundo caso práctico resuelto
+
+::: {.callout-note appearance="simple" icon="false"}
+## Adaptar el estilo a cada persona
+Una investigadora recién llegada a coordinar un proyecto tiene tres personas a su cargo y tiende a tratarlas igual. Al analizar cada caso, ajusta el estilo a la competencia y la confianza de cada una en la tarea concreta:
+
+| Persona y tarea | Situación | Estilo útil | Qué hace en la práctica |
+|---|---|---|---|
+| Técnica nueva, limpieza de datos | Poca experiencia, mucha motivación | **Directivo** | Instrucciones claras, ejemplos, revisión frecuente |
+| Doctoranda, análisis estadístico | Sabe, pero duda | **De apoyo** | Preguntas, ánimo, deja que decida |
+| Posdoc, redacción del artículo | Experta y segura | **Delegador** | Fija el objetivo y la fecha; no supervisa cada paso |
+
+El error inicial era aplicar a todos el estilo delegador: la técnica nueva se bloqueó y nadie lo notó en dos semanas. La lección: el estilo se elige **por persona y por tarea**, y cambia a medida que la persona gana autonomía.
+:::
+
+```{dot}
+//| label: fig-e3-estilos
+//| fig-cap: "El estilo evoluciona con la autonomía de la persona en cada tarea."
+//| fig-alt: "Secuencia de tres estilos de izquierda a derecha: directivo, de apoyo y delegador, unidos por flechas que indican que la persona gana competencia y confianza."
+digraph {
+  bgcolor="white"; pad=0.2; rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef3fb", color="#1a4d8f", fontname="Helvetica", fontsize=11];
+  edge [color="#45433f", fontname="Helvetica", fontsize=10];
+  d [label="Directivo\nqué y cómo"]; a [label="De apoyo\npreguntar y animar"]; g [label="Delegador\nobjetivo y fecha", fillcolor="#eaf6ef"];
+  d -> a [label="gana competencia"]; a -> g [label="gana confianza"];
+}
+```
+
 ## Ejercicios graduados
 
 **Básico.** ¿Qué conducta de liderazgo transaccional aparece en el caso?
@@ -137,7 +165,7 @@ Las conductas deben ser observables y relacionarse con los estilos del capítulo
 - La coordinadora reta al grupo a buscar explicaciones alternativas a sus resultados → Transformacional
 :::
 
-::: {.clasificar #ia-e3-dev titulo="¿Desarrollo del líder o del liderazgo? (Day et al., 2014)" categorias="Desarrollo del líder|Desarrollo del liderazgo"}
+::: {.clasificar #ia-e3-dev titulo="¿Desarrollo del líder o del liderazgo? [@day2014]" categorias="Desarrollo del líder|Desarrollo del liderazgo"}
 - Un curso de regulación emocional para una investigadora → Desarrollo del líder
 - Un retiro del grupo para acordar normas de colaboración → Desarrollo del liderazgo
 - Llevar un diario de reflexión tras cada reunión que diriges → Desarrollo del líder
@@ -161,7 +189,7 @@ Responde a todas las preguntas y pulsa **Mostrar respuestas**. No cuenta para la
 
 ::: {.webex-check .webex-box}
 1. Solo quien tiene un cargo puede ejercer liderazgo. {{< torf false >}}
-2. Según Day et al. (2014), el desarrollo del liderazgo se centra en el capital {{< mcq "humano" "*social" "económico" >}}
+2. Según @day2014, el desarrollo del liderazgo se centra en el capital {{< mcq "humano" "*social" "económico" >}}
 3. El desarrollo del líder y del liderazgo ocurre sobre todo a través de la {{< fitb "experiencia" ignorecase=true >}}
 4. El estilo asociado con la ausencia de liderazgo es el {{< mcq "transaccional" "*laissez-faire" "de servicio" >}}
 5. Hay un estilo de liderazgo que funciona igual en todas las situaciones. {{< torf false >}}
